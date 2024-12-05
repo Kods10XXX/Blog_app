@@ -9,7 +9,7 @@ const Port=process.env.Port|| 5000;// Utilise la variable d'environnement ou le 
 const app=express();
 
 // Connectez-vous à MongoDB nide via Mongoose
-mongoose.connect('mongodb+srv://BlogUser:123456789%23@cluster0.gu7on.mongodb.net/myapp?retryWrites=true&w=majority',{
+mongoose.connect('mongodb+srv://BlogUser:123456789%23@cluster0.gu7on.mongodb.net/myapp?retryWrites=true&w=majority&tls=true',{
 
 });
 
