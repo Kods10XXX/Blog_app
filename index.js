@@ -10,8 +10,7 @@ const app=express();
 
 // Connectez-vous à MongoDB nide via Mongoose
 mongoose.connect('mongodb+srv://BlogUser:123456789%23@cluster0.gu7on.mongodb.net/myapp?retryWrites=true&w=majority',{
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+
 });
 
 // Obtenez une référence à la connexion
