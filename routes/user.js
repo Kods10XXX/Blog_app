@@ -21,6 +21,25 @@ router.route("/:username").get(middleware.checkToken,async (req,res)=>{
     }
     
 });
+router.route("/checkusername/:username").get(async(req,res)=>{
+    try{
+        const result= await User.findOne({username:req.params.username},);
+        if(!result){
+            return res.json({
+                data:result,
+                Status:false,
+            });
+        } 
+        return res.json({
+            data:result,
+            Status:true,
+        });
+      
+    }catch(err){
+        console.error("Error in /checkusername/:username route:", err);
+        res.status(500).json({msg:"Internal Server Error",error:err.message});
+    }
+})
 
 router.route("/login").post(async(req,res)=>{
     try{
